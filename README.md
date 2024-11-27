@@ -1,4 +1,6 @@
-# gapidown: download file/folder from Google Drive using Google API
+# Helpful Tools for HPC in HUKST-GZ
+
+## gapidown.py
 
 When using gdown, we usually get:
 
@@ -22,3 +24,17 @@ Usage:
 4. Refresh and copy the access token
 5. Run: `python3 ./gdown.py $access_token $file_id`
 6. The the output path of downloaded file could be specified by option `-o $output_path` specify, or ./$filename by default.
+
+## pulse_vpn.py
+
+Connect to PulseSecure VPN, setting the routing rules in order to use Proxy
+
+Routing rules:
+- Only traffics to login.hpc.hkust-gz.edu.cn will go through PulseSecureVPN
+- Other traffics keep their default routes.
+
+Usage (recommend running in a virtual machine, with tools to keep running after logging out like `screen`):
+
+`python3 pulse_vpn.py $username $password`
+
+**!!! Known problem: Each time disconnect the VPN, you must reboot your system before reconnect next time.**
