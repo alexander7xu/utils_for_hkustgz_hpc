@@ -38,3 +38,18 @@ Usage (recommend running in a virtual machine, with tools to keep running after 
 `python3 pulse_vpn.py $username $password`
 
 **!!! Known problem: Each time disconnect the VPN, you must reboot your system before reconnect next time.**
+
+## hpcget.py
+
+Getting your hpc instances infomation inside hpc, especially **real ip & port**.
+
+Usage (In Login / Management / mgmt HPC Node):
+
+`python3 hpcget.py`
+
+The output format could be specified by option `-f $format`, or ssh_config, which could be copied into ~/.ssh/config, by default.
+
+> **Note:**
+> This script could also be run inside an hpc instance rather than mgmt node.
+> However, ip address of the result instances could not be resolved due to the limited network permission inside the hpc instance.
+> Therefore, you may get a wrong ip like `gpu1-42`.
