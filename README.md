@@ -53,3 +53,21 @@ The output format could be specified by option `-f $format`, or ssh_config, whic
 > This script could also be run inside an hpc instance rather than mgmt node.
 > However, ip address of the result instances could not be resolved due to the limited network permission inside the hpc instance.
 > Therefore, you may get a wrong ip like `gpu1-42`.
+
+## oh_my_hkust_gz_theme.sh
+
+This is a [oh-my-bash](https://github.com/ohmybash/oh-my-bash) theme based on [cupcake](https://github.com/ohmybash/oh-my-bash/blob/master/themes/cupcake/cupcake.theme.sh)
+
+```
+┌─ username 🤖 HpcName(MM-DD-HPCID) 🐍 condaenv 📁 path/to/workspace gitbranch ⌀1 ✗
+└❯ red          blue                    violet       yellow
+```
+
+Usage:
+
+```bash
+mkdir ~/.oh-my-bash/themes/oh_my_hkust_gz/
+cp ./oh_my_hkust_gz.theme.sh ~/.oh-my-bash/themes/oh_my_hkust_gz/
+```
+
+edit `~/.bashrc`, modify the variable `OSH_THEME='oh_my_hkust_gz'`
