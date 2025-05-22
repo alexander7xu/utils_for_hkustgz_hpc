@@ -25,7 +25,16 @@ Usage:
 5. Run: `python3 ./gdown.py $access_token $file_id`
 6. The the output path of downloaded file could be specified by option `-o $output_path` specify, or ./$filename by default.
 
-## pulse_vpn.py
+## ~~pulse_vpn.py~~
+
+**!!!Deprecated: HKUST-GZ dosen't support PulseSecure VPN since May 2025. Now the university use EasyConnect instead.**
+
+If you are interested in using Proxy with EasyConnect, I recommend [NJU-EasyConnect-Script](https://github.com/tangruize/NJU-EasyConnect-Script/) as a multi-platform reference.
+
+However, I will not rewrite the script using EasyConnect, for the below reasons:
+- I am using Windows ARM, while EasyConnect doesn't provide ARM versions, including Windows/Linux/MacOS.
+- My solution is running it on an Android phone, with [Termux](https://termux.dev/en/) as a SSH Server.
+- Secure concern: See [转发给你的同学看看 如何应对与卸载删除它？有什么替代方案？-哔哩哔哩](https://b23.tv/z356yuD). It requires extremely great permissons, while it doesn't update since 2020.
 
 Connect to PulseSecure VPN, setting the routing rules in order to use Proxy
 
