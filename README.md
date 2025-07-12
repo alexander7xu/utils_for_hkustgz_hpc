@@ -29,24 +29,11 @@ Usage:
 
 **!!!Deprecated: HKUST-GZ dosen't support PulseSecure VPN since May 2025. Now the university use EasyConnect instead.**
 
-If you are interested in using Proxy with EasyConnect, I recommend [NJU-EasyConnect-Script](https://github.com/tangruize/NJU-EasyConnect-Script/) as a multi-platform reference.
+RECOMMEND: Use the open source 3rd party client [EasierConnect](https://github.com/lyc8503/EasierConnect):
 
-However, I will not rewrite the script using EasyConnect, for the below reasons:
-- I am using Windows ARM, while EasyConnect doesn't provide ARM versions, including Windows/Linux/MacOS.
-- My solution is running it on an Android phone, with [Termux](https://termux.dev/en/) as a SSH Server.
-- Secure concern: See [转发给你的同学看看 如何应对与卸载删除它？有什么替代方案？-哔哩哔哩](https://b23.tv/z356yuD). It requires extremely great permissons, while it doesn't update since 2020.
-
-Connect to PulseSecure VPN, setting the routing rules in order to use Proxy
-
-Routing rules:
-- Only traffics to login.hpc.hkust-gz.edu.cn will go through PulseSecureVPN
-- Other traffics keep their default routes.
-
-Usage (recommend running in a virtual machine, with tools to keep running after logging out like `screen`):
-
-`python3 pulse_vpn.py $username $password`
-
-**!!! Known problem: Each time disconnect the VPN, you must reboot your system before reconnect next time.**
+- Works on Windows 11 ARM.
+- However, [Ncat](https://nmap.org/download.html) is required to proxy the ssh traffics. DNS seems not work properly.
+- Usage: `ssh user@ip.addr.hpc.login -o ProxyCommand='ncat.exe --proxy-type socks5 --proxy 127.0.0.1:1080 %h %p'`
 
 ## hpcget.py
 
